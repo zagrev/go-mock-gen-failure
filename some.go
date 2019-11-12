@@ -8,6 +8,6 @@ type SomeImpl struct {
 }
 
 // Method the implementation of Some.Method()
-func (u SomeImpl) Method(argument string) string {
-	return fmt.Sprintf("Method called, %v %v\n", argument, u.value)
+func (u SomeImpl) Method(argument string, arg2 int) string {
+	return fmt.Sprintf("Method called, %v %v %v\n", argument, u.value, arg2)
 }

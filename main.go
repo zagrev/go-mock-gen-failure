@@ -9,5 +9,5 @@ func main() {
 
 	some = SomeImpl{value:14}
 
-	fmt.Printf("Some Method returns " + string(some.Method("bob")))
+	fmt.Printf("Some Method returns " + string(some.Method("bob", 22)))
 }

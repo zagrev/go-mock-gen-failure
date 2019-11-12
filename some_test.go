@@ -16,12 +16,12 @@ func TestMethod(t *testing.T) {
 	expected := "TEST"
 
 	gomock.InOrder(
-		mockAPI.EXPECT().Method("bob").
+		mockAPI.EXPECT().Method("bob", 42).
 			Return(expected).
 			Times(1),
 	)
 
-	actual := mockAPI.Method("bob")
+	actual := mockAPI.Method("bob", 42)
 
 	if actual != expected {
 		t.Errorf("expected != actual")
